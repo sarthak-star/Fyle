@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repositories</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div class="pagination">
+        <label for="max-repositories">Max Repositories Per Page:</label>
+        <select id="max-repositories" onchange="updateMaxRepositoriesPerPage()">
+          <option value="10">9</option>
+          <option value="25">18</option>
+          <option value="50">27</option>
+          <option value="100">36</option>
+        </select>
+      </div>
+      <h1>GitHub Repositories</h1>
+      <label for="username">Enter GitHub Username:</label>
+      <input type="text" id="username" placeholder="Enter GitHub username" />
+      <button onclick="fetchRepositories()">Fetch Repositories</button>
+      <div id="user-info"></div>
+      <div id="repositories-list"></div>
+      <div id="paging" class="paging">
+        <button id="prevButton" disabled>Previous</button>
+        <button id="nextButton" disabled>Next</button>
+      </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
